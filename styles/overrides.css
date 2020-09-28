@@ -1,0 +1,5 @@
+[data-theme='light'] .m-logo {
+  background-color: var(--titles-color);
+  padding-right: 5px;
+  margin-right: -5px;
+}

@@ -1,0 +1,8 @@
+.image {
+  transition: all 500ms ease-in;
+}
+
+.imageBeforeLoad {
+  filter: blur(25px);
+  background-size: 'cover';
+}
