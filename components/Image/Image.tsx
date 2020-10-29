@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { Fragment, useState } from 'react';
 // import Img from 'react-optimized-image';
+import { default as NextImage } from 'next/image';
 import classnames from 'classnames';
 
 import { useLqipImage } from './hooks';
@@ -13,7 +14,7 @@ interface Props extends HTMLImageElement {
 const Image = (props) => {
   const { source, className, ...rest } = props;
 
-  const lqipImage = source ? require(`../../public${source}?lqip`) : null;
+  // const lqipImage = source ? require(`../../public${source}?lqip`) : null;
 
   // const { lqipImage, image } = useLqipImage(source);
 
@@ -24,7 +25,7 @@ const Image = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <Fragment>
       {/* <img
       {...rest}
       className={classnames(styles.image, className, {
@@ -33,7 +34,14 @@ const Image = (props) => {
       loading="lazy"
       src={image || lqipImage}
     /> */}
-      <img
+      <NextImage src={source} className={className} unsized quality={100} />
+      {/* <NextImage
+        src={source}
+        className={className}
+        width={4032}
+        height={3024}
+      /> */}
+      {/* <img
         {...rest}
         src={source}
         className={className}
@@ -46,8 +54,8 @@ const Image = (props) => {
         className={className}
         src={lqipImage}
         style={{ opacity: loading ? undefined : 0 }}
-      />
-    </React.Fragment>
+      /> */}
+    </Fragment>
   );
 };
 

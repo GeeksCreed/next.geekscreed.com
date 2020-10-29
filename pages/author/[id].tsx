@@ -1,10 +1,11 @@
-import React from 'react';
+import { Fragment } from 'react';
+import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import Layout from '@components/Layout';
+
 import { AuthorAPI, PostAPI } from '@lib/api';
+import Layout from '@components/Layout';
 import HeroImage from '@components/Image/HeroImage';
 import PostCard from '@components/PostCard';
-import Head from 'next/head';
 
 const Author = ({ author, posts }) => {
   const length = posts?.length;
@@ -92,10 +93,10 @@ const Author = ({ author, posts }) => {
                     : 'No Posts'}
                 </li>
                 {author.location && (
-                  <React.Fragment>
+                  <Fragment>
                     <li>&bull;</li>
                     <li>{author.location}</li>
-                  </React.Fragment>
+                  </Fragment>
                 )}
               </ul>
             </div>

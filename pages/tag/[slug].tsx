@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react';
+
 import { GetStaticProps, GetStaticPaths } from 'next';
 
 import { TagAPI, PostAPI } from '@lib/api';

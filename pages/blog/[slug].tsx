@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useLayoutEffect, useMemo } from 'react';
+import { useEffect, useState, useLayoutEffect, useMemo, Fragment } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ import PageProgressButton from '@components/posts/PageProgressButton';
 import Layout from '@components/Layout';
 import HeroImage from '@components/Image/HeroImage';
 
-import 'prism-themes/themes/prism-darcula.css';
+// import 'prism-themes/themes/prism-darcula.css';
 
 const DiscussionEmbed: React.ComponentType<any> = dynamic(
   () => import('disqus-react').then((mod) => mod.DiscussionEmbed),
@@ -109,7 +109,7 @@ export default function Post({ post, tags }) {
                   <h1 className="m-heading__title in-post">{post.title}</h1>
                   <div className="m-heading__meta">
                     {primary_tag && (
-                      <React.Fragment>
+                      <Fragment>
                         <Link href={`/tag/${primary_tag.slug}`}>
                           <a className="m-heading__meta__tag">
                             {primary_tag.name}
@@ -121,7 +121,7 @@ export default function Post({ post, tags }) {
                         >
                           &bull;
                         </span>
-                      </React.Fragment>
+                      </Fragment>
                     )}
                     <span className="m-heading__meta__time">
                       {post.published_at}

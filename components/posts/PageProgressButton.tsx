@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 export const PageProgressButton = () => {
   const progressSettingInProcess = useRef(null);
 

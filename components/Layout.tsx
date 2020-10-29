@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { Fragment } from 'react';
 import Head from 'next/head';
 import { NextSeo, SocialProfileJsonLd } from 'next-seo';
 
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
   const site_url = process.env.NEXT_PUBLIC_SITE_URL;
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
-    </React.Fragment>
+    </Fragment>
   );
 };
 

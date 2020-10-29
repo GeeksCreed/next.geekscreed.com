@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Tippy from '@tippyjs/react';
 import Image from './Image/Image';
@@ -53,7 +53,7 @@ const PostCard = (props) => {
             aria-label={primary_author.name}
           >
             <Tippy content={`Posted by ${primary_author.name}`}>
-              <React.Fragment>
+              <Fragment>
                 {/* data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}" */}
                 {/* {{#if primary_author.profile_image}} */}
                 {/* {{else}} */}
@@ -67,7 +67,7 @@ const PostCard = (props) => {
                     })`,
                   }}
                 />
-              </React.Fragment>
+              </Fragment>
             </Tippy>
           </a>
         </Link>
