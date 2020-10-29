@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Tippy from '@tippyjs/react';
 import classnames from 'classnames';
@@ -132,7 +132,7 @@ const Header = () => {
                     </Link>
                   </li>
                 ))}
-                {secondaryNavigation.length && (
+                {secondaryNavigation?.length > 0 && (
                   <Tippy
                     arrow
                     interactive

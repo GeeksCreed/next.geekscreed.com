@@ -1,0 +1,10 @@
+export default [
+  {
+    label: 'Home',
+    url: '/',
+  },
+  {
+    label: 'Web Development',
+    url: '/tag/web-dev',
+  },
+];

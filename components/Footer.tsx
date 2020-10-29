@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   const site_title = process.env.NEXT_PUBLIC_SITE_TITLE;
 

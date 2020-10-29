@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Head from 'next/head';
 
 import { PostAPI, TagAPI } from '@lib/api';
@@ -15,7 +15,7 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <React.Fragment>
+      <Fragment>
         <Head>
           <title>
             {site_title} | {site_description}
@@ -41,7 +41,7 @@ export default function Home(props) {
             </div>
           </div>
         </main>
-      </React.Fragment>
+      </Fragment>
     </Layout>
   );
 }

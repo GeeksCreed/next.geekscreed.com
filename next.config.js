@@ -13,12 +13,12 @@ const nextConfig = {
 
 module.exports = withPlugins(
   [
-    [
-      optimizedImages,
-      {
-        optimizeImagesInDev: true,
-      },
-    ],
+    // [
+    //   optimizedImages,
+    //   {
+    //     optimizeImagesInDev: true,
+    //   },
+    // ],
     withBundleAnalyzer,
   ],
   nextConfig
