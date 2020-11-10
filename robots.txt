@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Host: https://geekscreed.com
-Sitemap: https://geekscreed.com/sitemap.xml
+Host: https://new.geekscreed.com
+Sitemap: https://new.geekscreed.com/sitemap.xml
